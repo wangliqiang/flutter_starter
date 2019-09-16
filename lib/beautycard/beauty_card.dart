@@ -157,7 +157,7 @@ class _beautyCardState extends State<beautyCard> {
                         padding: EdgeInsets.symmetric(
                             horizontal: 22.0, vertical: 6.0),
                         child: Text(
-                          "latest",
+                          "Latest",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
