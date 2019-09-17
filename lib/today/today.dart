@@ -28,7 +28,8 @@ class _TodayState extends State<Today> with TickerProviderStateMixin {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            '08:41 星期二',
+                            '${DateTime.now().month}月${DateTime.now().day}日 ' +
+                                getWeekday(DateTime.now().weekday),
                             style: TextStyle(
                                 fontSize: 12,
                                 decoration: TextDecoration.none,
@@ -55,6 +56,7 @@ class _TodayState extends State<Today> with TickerProviderStateMixin {
                           size: 30,
                         ),
                         padding: const EdgeInsets.only(top: 10),
+                        onPressed: () {},
                       ),
                     ),
                   ],
@@ -158,5 +160,34 @@ class _TodayState extends State<Today> with TickerProviderStateMixin {
         ),
       ),
     );
+  }
+
+  String getWeekday(int weekday) {
+    var strWeekday;
+    switch (weekday) {
+      case 1:
+        strWeekday = "星期一";
+        break;
+      case 2:
+        strWeekday = "星期二";
+        break;
+      case 3:
+        strWeekday = "星期三";
+        break;
+      case 4:
+        strWeekday = "星期四";
+        break;
+      case 5:
+        strWeekday = "星期五";
+        break;
+      case 6:
+        strWeekday = "星期六";
+        break;
+      case 7:
+        strWeekday = "星期日";
+        break;
+    }
+
+    return strWeekday;
   }
 }
