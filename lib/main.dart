@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'tabbar/bottom_tabbar.dart';
-import 'appbar/bottom_appbar.dart';
+
 import 'anim/animation.dart';
+import 'appbar/bottom_appbar.dart';
+import 'beautycard/beauty_card.dart';
 import 'keepalivestate/keep_alive_state.dart';
 import 'searchbar/search_bar.dart';
-import 'beautycard/beauty_card.dart';
+import 'tabbar/bottom_tabbar.dart';
+import 'today/today.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,23 +26,20 @@ class MyApp extends StatelessWidget {
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Starter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Starter'),
-        ),
-        body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Starter'),
+      ),
+      body: Container(
+        child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => BottomTabbarScreen(),
+                      builder: (context) => bottomTabbar(),
                     ),
                   );
                 },
@@ -53,7 +52,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => BottomAppbarScreen(),
+                      builder: (context) => bottomAppBar(),
                     ),
                   );
                 },
@@ -66,7 +65,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AnimScreen(),
+                      builder: (context) => FirstPage(),
                     ),
                   );
                 },
@@ -79,7 +78,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => KeepAliveStateScreen(),
+                      builder: (context) => KeepAliveState(),
                     ),
                   );
                 },
@@ -92,7 +91,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SearchBarScreen(),
+                      builder: (context) => SearchBar(),
                     ),
                   );
                 },
@@ -105,7 +104,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CardAnimScreen(),
+                      builder: (context) => beautyCard(),
                     ),
                   );
                 },
@@ -113,94 +112,23 @@ class MainScreen extends StatelessWidget {
                 color: Colors.lightBlue,
                 textColor: Colors.white,
               ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Today(),
+                    ),
+                  );
+                },
+                child: Text('AppStore Today 界面'),
+                color: Colors.lightBlue,
+                textColor: Colors.white,
+              ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-/**
- * 底部导航栏
- */
-class BottomTabbarScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'BottomTabbarScreen',
-      home: bottomTabbar(),
-    );
-  }
-}
-
-/**
- * 不规则底部导航栏
- */
-class BottomAppbarScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'BottomAppbarScreen',
-      home: bottomAppBar(),
-    );
-  }
-}
-
-/**
- * 路由跳转动画
- */
-class AnimScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'BottomAppbarScreen',
-      home: FirstPage(),
-    );
-  }
-}
-
-/**
- * 路由跳转动画
- */
-class KeepAliveStateScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'KeepAliveState',
-      home: KeepAliveState(),
-    );
-  }
-}
-
-/**
- * 搜索框
- */
-class SearchBarScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'SearchBar',
-      home: SearchBar(),
-    );
-  }
-}
-
-/**
- * 精美卡片
- */
-class CardAnimScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: '精美卡片',
-      home: beautyCard(),
     );
   }
 }
