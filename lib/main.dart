@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'anim/animation.dart';
 import 'appbar/bottom_appbar.dart';
 import 'beautycard/beauty_card.dart';
+import 'character/character_list.dart';
 import 'keepalivestate/keep_alive_state.dart';
 import 'searchbar/search_bar.dart';
 import 'tabbar/bottom_tabbar.dart';
@@ -122,6 +123,19 @@ class MainScreen extends StatelessWidget {
                   );
                 },
                 child: Text('AppStore Today 界面'),
+                color: Colors.lightBlue,
+                textColor: Colors.white,
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CharacterList(),
+                    ),
+                  );
+                },
+                child: Text('神偷奶爸'),
                 color: Colors.lightBlue,
                 textColor: Colors.white,
               ),

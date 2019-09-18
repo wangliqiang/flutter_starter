@@ -34,12 +34,17 @@ class TodayDetail extends StatelessWidget {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text(
-                                  todayInfo.subTitle,
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.grey,
-                                      decoration: TextDecoration.none),
+                                Material(
+                                  color: Colors.transparent,
+                                  child: Container(
+                                    child: Text(
+                                      todayInfo.subTitle,
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.grey,
+                                          decoration: TextDecoration.none),
+                                    ),
+                                  ),
                                 ),
                                 Material(
                                   elevation: 1,
@@ -63,20 +68,30 @@ class TodayDetail extends StatelessWidget {
                               ],
                             ),
                             Expanded(
-                              child: Text(
-                                todayInfo.title,
-                                style: TextStyle(
-                                    fontSize: 30.0,
-                                    color: Colors.grey,
-                                    decoration: TextDecoration.none),
+                              child: Material(
+                                color: Colors.transparent,
+                                child: Container(
+                                  child: Text(
+                                    todayInfo.title,
+                                    style: TextStyle(
+                                        fontSize: 30.0,
+                                        color: Colors.grey,
+                                        decoration: TextDecoration.none),
+                                  ),
+                                ),
                               ),
                             ),
-                            Text(
-                              todayInfo.content,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color(todayInfo.fontColor),
-                                  decoration: TextDecoration.none),
+                            Material(
+                              color: Colors.transparent,
+                              child: Container(
+                                child: Text(
+                                  todayInfo.content,
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Color(todayInfo.fontColor),
+                                      decoration: TextDecoration.none),
+                                ),
+                              ),
                             )
                           ],
                         ),
