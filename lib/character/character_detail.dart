@@ -46,9 +46,9 @@ class _CharacterDetailState extends State<CharacterDetail>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                SizedBox(height: 40),
+                SizedBox(height: 30),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, top: 8.0),
+                  padding: const EdgeInsets.only(left: 8.0),
                   child: IconButton(
                     icon: Icon(Icons.close,
                         size: 30, color: Colors.white.withOpacity(0.9)),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../pages/each_view.dart';
 
 class bottomAppBar extends StatefulWidget {
@@ -25,9 +26,6 @@ class _BottomAppBarState extends State<bottomAppBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('底部工具栏'),
-      ),
       body: _eachView[_index],
       floatingActionButton: FloatingActionButton(
         onPressed: () {

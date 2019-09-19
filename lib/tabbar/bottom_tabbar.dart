@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/home.dart';
-import '../pages/email.dart';
-import '../pages/page.dart';
-import '../pages/airplay.dart';
+
 import '../pages/each_view.dart';
 
 class bottomTabbar extends StatefulWidget {
@@ -28,9 +25,6 @@ class _tabbarState extends State<bottomTabbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('底部导航栏'),
-      ),
       body: list[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
