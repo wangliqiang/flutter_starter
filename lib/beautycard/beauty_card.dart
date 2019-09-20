@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
-import 'data.dart';
 import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+import 'data.dart';
 
 class beautyCard extends StatefulWidget {
   @override

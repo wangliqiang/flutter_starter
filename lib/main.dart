@@ -50,12 +50,6 @@ class MainScreen extends StatelessWidget {
                 return itemView(context, screenHeight, index);
               }),
         ),
-//        child: ListView.builder(
-//          itemCount: pageList.length,
-//          itemBuilder: (context, index) {
-//            return itemView(context, screenHeight, index);
-//          },
-//        ),
       ),
     );
   }
