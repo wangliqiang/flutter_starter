@@ -34,19 +34,22 @@ class MainScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.orangeAccent,
         ),
-        child: GridView.builder(
-            itemCount: pageList.length,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                //单个子Widget的水平最大宽度
-                maxCrossAxisExtent: MediaQuery.of(context).size.width / 2,
-                childAspectRatio: 2,
-                //水平单个子Widget之间间距
-                mainAxisSpacing: 0,
-                //垂直单个子Widget之间间距
-                crossAxisSpacing: 0),
-            itemBuilder: (context, index) {
-              return itemView(context, screenHeight, index);
-            }),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: GridView.builder(
+              itemCount: pageList.length,
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  //单个子Widget的水平最大宽度
+                  maxCrossAxisExtent: MediaQuery.of(context).size.width / 2,
+                  childAspectRatio: 2,
+                  //水平单个子Widget之间间距
+                  mainAxisSpacing: 0,
+                  //垂直单个子Widget之间间距
+                  crossAxisSpacing: 0),
+              itemBuilder: (context, index) {
+                return itemView(context, screenHeight, index);
+              }),
+        ),
 //        child: ListView.builder(
 //          itemCount: pageList.length,
 //          itemBuilder: (context, index) {
