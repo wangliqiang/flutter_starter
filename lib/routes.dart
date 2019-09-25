@@ -6,12 +6,14 @@ import 'appbar/bottom_appbar.dart';
 import 'beautycard/beauty_card.dart';
 import 'character/character_list.dart';
 import 'creditcard/credit_card.dart';
+import 'flare/flare.dart';
 import 'keepalivestate/keep_alive_state.dart';
 import 'searchbar/search_bar.dart';
 import 'tabbar/bottom_tabbar.dart';
 
 //路由集合
 var routes = {
+  "/flare": (BuildContext context) => Flare(),
   "/character": (BuildContext context) => CharacterList(),
   "/credit_card": (BuildContext context) => CreditCard(),
   "/today": (BuildContext context) => Today(),
@@ -24,6 +26,12 @@ var routes = {
 };
 
 List<PageInfo> pageList = [
+  PageInfo(
+      route: "/flare",
+      imagePath:
+          "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1377700654,4207098182&fm=15&gp=0.jpg",
+      title: "Flare动画",
+      subTitle: "Complex Animation"),
   PageInfo(
       route: "/character",
       imagePath:
